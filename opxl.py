@@ -37,6 +37,22 @@ files = os.listdir(path)
 
 files = [file for file in files if ".xlsx" in file]
 
+#checking if files already exist
+#need to change directory paths
+curDate = dt.today()
+fileName = "model_" + curDate.strftime("%Y%m%d") + ".xlsx"
+created = os.stat(fileName).st_ctime
+now = dt.now()
+dateTimeFile = dt.fromtimestamp(created)
+
+dateFile = dateTimeFile.strftime("%m/%d/%Y")
+
+dateNow = now.strftime("%m/%d/%Y")
+
+if(dateNow == dateFile):
+    os.remove(fileName)
+    print("fileRemoved")
+
 rowCounterEmpirical = 2
 rowCounterRegression = 2
 

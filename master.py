@@ -4,6 +4,7 @@ from openpyxl.utils import get_column_letter
 import os
 import zipfile as zp
 import glob as gb
+import shutil as su
 from datetime import datetime as dt
 import io
 import timeit
@@ -27,33 +28,24 @@ cur = mydb.cursor()
 print(mydb)
 
 #getting the current directories locaiton (where the data will be)
-zipPath = "/home/ubuntu/"
+zipPath = "/home/ec2-user"
 
 #accessing the zip file
 file = gb.glob(os.path.join(zipPath, "*.zip"))
 
 #extracting the zip file
 zip = zp.ZipFile(file[0])
-zip.extractall("/opt/rawdata/")
+zip.extractall("/opt/eVolume/temp")
 
 zip.close()
 
-zipPath = "/opt/rawdata/"
+zipPath = "/opt/eVolume/temp/"
 #checking if files already exist
 #need to change directory paths
-outputPath = "/opt/newvolume/dataout/"
+outputPath = "/opt/eVolume/dataout/"
 curDate = dt.today()
 fileName = "model_" + curDate.strftime("%Y%m%d") + ".xlsx"
 if os.path.isfile(outputPath + fileName):
-    # created = os.stat(fileName).st_ctime
-    # now = dt.now()
-    # dateTimeFile = dt.fromtimestamp(created)
-
-    # dateFile = dateTimeFile.strftime("%m/%d/%Y")
-
-    # dateNow = now.strftime("%m/%d/%Y")
-
-    # if(dateNow == dateFile):
     os.remove(outputPath + fileName)
     print("fileRemoved")
 
@@ -187,6 +179,9 @@ cur.executemany(q, rowValues)
 mydb.commit()
 mydb.close()
 print(rowValues)
+
+archiveDestinationPath = "/opt/eVolume/datout/archive/"
+su.move(file[0], archiveDestinationPath)
 
 toc = timeit.default_timer()
 

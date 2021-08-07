@@ -180,8 +180,9 @@ mydb.commit()
 mydb.close()
 print(rowValues)
 
-archiveDestinationPath = "/opt/eVolume/datout/archive/"
-su.move(file[0], archiveDestinationPath)
+f = gb.glob(os.path.join("/home/ec2-user", "*.zip"))
+zipF = zp.ZipFile(f[0])
+su.move(zipF, archiveDestinationPath)
 
 toc = timeit.default_timer()
 

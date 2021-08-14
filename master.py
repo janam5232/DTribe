@@ -10,7 +10,7 @@ import io
 import timeit
 import mysql.connector as sql
 
-#DATABASE CONNECTION
+#DATABASE CONNECTION g
 
 dbName = 'AnalystData'
 host = 'db1.cs3pcss752yf.ap-south-1.rds.amazonaws.com'

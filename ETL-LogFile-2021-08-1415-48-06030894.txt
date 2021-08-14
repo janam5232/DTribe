@@ -1,0 +1,214 @@
+MySQL connection: 
+
+<mysql.connector.connection.MySQLConnection object at 0x000001A6C600C0D0>
+Files Extracted from C:\Users\janam\Desktop\files\z1.zip
+
+Output workbook created.
+
+Extraction starts here: 
+
+				FileName: ABMD - EndNov2018_Send.xlsx
+
+Time taken by empirical sheets in ABMD - EndNov2018_Send.xlsx : 1.7671653000000003
+
+Time taken by Regression sheets in ABMD - EndNov2018_Send.xlsx : 0.04869940000000028
+
+Uploading "Data" sheet from ABMD - EndNov2018_Send.xlsx to database 
+
+Time taken to upload "Data" sheet to database: 2.2298814999999994
+
+				FileName: ABT - EndNov2018_Send.xlsx
+
+Time taken by empirical sheets in ABT - EndNov2018_Send.xlsx : 16.0052673
+
+Time taken by Regression sheets in ABT - EndNov2018_Send.xlsx : 0.18841450000000037
+
+Uploading "Data" sheet from ABT - EndNov2018_Send.xlsx to database 
+
+Time taken to upload "Data" sheet to database: 180.49609149999998
+
+				FileName: ATRC - EndNov2018_Send.xlsx
+
+Time taken by empirical sheets in ATRC - EndNov2018_Send.xlsx : 1.863773000000009
+
+Time taken by Regression sheets in ATRC - EndNov2018_Send.xlsx : 0.03614540000000943
+
+Uploading "Data" sheet from ATRC - EndNov2018_Send.xlsx to database 
+
+Time taken to upload "Data" sheet to database: 5.100380599999994
+
+				FileName: BSX - EndNov2018_Send.xlsx
+
+Time taken by empirical sheets in BSX - EndNov2018_Send.xlsx : 12.806264999999996
+
+Time taken by Regression sheets in BSX - EndNov2018_Send.xlsx : 0.2280574000000115
+
+Uploading "Data" sheet from BSX - EndNov2018_Send.xlsx to database 
+
+Time taken to upload "Data" sheet to database: 137.46352310000003
+
+				FileName: CNMD - EndNov2018_Send.xlsx
+
+Time taken by empirical sheets in CNMD - EndNov2018_Send.xlsx : 1.6538616000000275
+
+Time taken by Regression sheets in CNMD - EndNov2018_Send.xlsx : 0.050485500000036154
+
+Uploading "Data" sheet from CNMD - EndNov2018_Send.xlsx to database 
+
+Time taken to upload "Data" sheet to database: 79.63622720000001
+
+				FileName: CRY - EndNov2018_Send.xlsx
+
+Time taken by empirical sheets in CRY - EndNov2018_Send.xlsx : 3.6728005999999596
+
+Time taken by Regression sheets in CRY - EndNov2018_Send.xlsx : 0.09059839999997621
+
+Uploading "Data" sheet from CRY - EndNov2018_Send.xlsx to database 
+
+Time taken to upload "Data" sheet to database: 4.118983200000002
+
+				FileName: CRY - EndNov2018_Send_Copy.xlsx
+
+Time taken by empirical sheets in CRY - EndNov2018_Send_Copy.xlsx : 3.540603900000008
+
+Time taken by Regression sheets in CRY - EndNov2018_Send_Copy.xlsx : 0.044289199999980156
+
+Uploading "Data" sheet from CRY - EndNov2018_Send_Copy.xlsx to database 
+
+Time taken to upload "Data" sheet to database: 4.306266999999991
+
+				FileName: CSII - EndNov2018_Send.xlsx
+
+Time taken by empirical sheets in CSII - EndNov2018_Send.xlsx : 2.3892387000000213
+
+Time taken by Regression sheets in CSII - EndNov2018_Send.xlsx : 0.041326200000014524
+
+Uploading "Data" sheet from CSII - EndNov2018_Send.xlsx to database 
+
+Time taken to upload "Data" sheet to database: 7.249439099999961
+
+				FileName: CTEC - EndNov2018_Send.xlsx
+
+Time taken by empirical sheets in CTEC - EndNov2018_Send.xlsx : 6.0870927999999935
+
+Time taken by Regression sheets in CTEC - EndNov2018_Send.xlsx : 0.04340919999998505
+
+Uploading "Data" sheet from CTEC - EndNov2018_Send.xlsx to database 
+
+Time taken to upload "Data" sheet to database: 65.20397590000005
+
+				FileName: ELGX - EndNov2018_Send.xlsx
+
+Time taken by empirical sheets in ELGX - EndNov2018_Send.xlsx : 1.6051860000000033
+
+Time taken by Regression sheets in ELGX - EndNov2018_Send.xlsx : 0.03836269999999331
+
+Uploading "Data" sheet from ELGX - EndNov2018_Send.xlsx to database 
+
+Time taken to upload "Data" sheet to database: 4.085618400000044
+
+				FileName: EW - EndNov2018_Send.xlsx
+
+Time taken by empirical sheets in EW - EndNov2018_Send.xlsx : 7.560205099999962
+
+Time taken by Regression sheets in EW - EndNov2018_Send.xlsx : 0.07275970000000598
+
+Uploading "Data" sheet from EW - EndNov2018_Send.xlsx to database 
+
+Time taken to upload "Data" sheet to database: 71.74292579999997
+
+				FileName: GKOS - EndNov2018_Send.xlsx
+
+Time taken by empirical sheets in GKOS - EndNov2018_Send.xlsx : 0.7968041000000312
+
+Time taken by Regression sheets in GKOS - EndNov2018_Send.xlsx : 0.053139999999984866
+
+Uploading "Data" sheet from GKOS - EndNov2018_Send.xlsx to database 
+
+Time taken to upload "Data" sheet to database: 0.5746963999999934
+
+				FileName: GMED - EndNov2018_Send.xlsx
+
+Time taken by empirical sheets in GMED - EndNov2018_Send.xlsx : 3.352424000000042
+
+Time taken by Regression sheets in GMED - EndNov2018_Send.xlsx : 0.03912000000002536
+
+Uploading "Data" sheet from GMED - EndNov2018_Send.xlsx to database 
+
+Time taken to upload "Data" sheet to database: 34.57043399999998
+
+				FileName: GNMK - EndNov2018_Send.xlsx
+
+Time taken by empirical sheets in GNMK - EndNov2018_Send.xlsx : 2.4444032000000107
+
+Time taken by Regression sheets in GNMK - EndNov2018_Send.xlsx : 0.05685479999999643
+
+Uploading "Data" sheet from GNMK - EndNov2018_Send.xlsx to database 
+
+Time taken to upload "Data" sheet to database: 0.371472400000016
+
+				FileName: HOLX - EndNov2018_Send.xlsx
+
+Time taken by empirical sheets in HOLX - EndNov2018_Send.xlsx : 4.856940499999951
+
+Time taken by Regression sheets in HOLX - EndNov2018_Send.xlsx : 0.04328329999998459
+
+Uploading "Data" sheet from HOLX - EndNov2018_Send.xlsx to database 
+
+Time taken to upload "Data" sheet to database: 28.852262199999927
+
+				FileName: IART - EndNov2018_Send.xlsx
+
+Time taken by empirical sheets in IART - EndNov2018_Send.xlsx : 7.242321299999958
+
+Time taken by Regression sheets in IART - EndNov2018_Send.xlsx : 0.04365959999995539
+
+Uploading "Data" sheet from IART - EndNov2018_Send.xlsx to database 
+
+Time taken to upload "Data" sheet to database: 93.79396959999997
+
+				FileName: ISRG - EndNov2018_Send.xlsx
+
+Time taken by empirical sheets in ISRG - EndNov2018_Send.xlsx : 2.164966100000015
+
+Time taken by Regression sheets in ISRG - EndNov2018_Send.xlsx : 0.07754899999997633
+
+Uploading "Data" sheet from ISRG - EndNov2018_Send.xlsx to database 
+
+Time taken to upload "Data" sheet to database: 47.53672849999998
+
+				FileName: LMAT - EndNov2018_Send.xlsx
+
+Time taken by empirical sheets in LMAT - EndNov2018_Send.xlsx : 3.4945704000000433
+
+Time taken by Regression sheets in LMAT - EndNov2018_Send.xlsx : 0.04339089999996304
+
+Uploading "Data" sheet from LMAT - EndNov2018_Send.xlsx to database 
+
+Time taken to upload "Data" sheet to database: 17.16939830000001
+
+				FileName: MASI - EndNov2018_Send.xlsx
+
+Time taken by empirical sheets in MASI - EndNov2018_Send.xlsx : 4.229453499999977
+
+Time taken by Regression sheets in MASI - EndNov2018_Send.xlsx : 0.04334219999998368
+
+Uploading "Data" sheet from MASI - EndNov2018_Send.xlsx to database 
+
+Time taken to upload "Data" sheet to database: 11.8807994
+
+				FileName: ZBH - EndNov2018_Send.xlsx
+
+Time taken by empirical sheets in ZBH - EndNov2018_Send.xlsx : 19.859544099999994
+
+Time taken by Regression sheets in ZBH - EndNov2018_Send.xlsx : 0.1812769999999091
+
+Uploading "Data" sheet from ZBH - EndNov2018_Send.xlsx to database 
+
+Time taken to upload "Data" sheet to database: 99.4624854000001
+
+Uploading data to the database
+
+Time taken to upload the final data to database : 0.39926619999994273
+
+Time taken by the whole script : 1008.3404121000001

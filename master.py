@@ -157,7 +157,7 @@ for file in files:
 
 outputWorkbook.save(outputWorkbookPath)
 
-#deleting files after processing
+#deleting files the after processing
 
 for file in files:
     os.remove(zipPath + file)

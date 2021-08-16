@@ -9,6 +9,7 @@ import io
 import timeit
 import mysql.connector as sql
 import pandas as pd
+import shutil as su
 
 #DATABASE CONNECTION
 dbName = 'AnalystData'
@@ -38,25 +39,26 @@ print(mydbData)
 #Opening LOG File
 logFileNameDate = str(dt.now())
 logFileNameDate = logFileNameDate.replace('.', '').replace(' ', '').replace(':', '-')
-logFile = open("C:\\Users\\janam\\Desktop\\output\\" + "ETL-LogFile-" + logFileNameDate + ".txt", 'a')
+logFile = open("/opt/newvolume/archive/logs/" + "ETL-LogFile-" + logFileNameDate + ".txt", 'a')
 logFile.writelines('MySQL connection: \n\n')
-logFile.writelines(str(mydb) + '\n')
+# logFile.writelines(str(mydb) + '\n')
 
 #getting the current directories locaiton (where the data will be)
-zipPath = "C:\\Users\\janam\\Desktop\\files\\"
+zipPath = "/home/ubuntu/"
 
 #accessing the zip file
 file = gb.glob(os.path.join(zipPath, "*.zip"))
 
 #extracting the zip file
 zip = zp.ZipFile(file[0])
-zip.extractall(zipPath)
+zip.extractall("/opt/newvolume/rawdata/")
 
 zip.close()
+zipPath = "/opt/newvolume/rawdata/"
 logFile.writelines('Files Extracted from ' + file[0] + '\n\n')
 #checking if files already exist
 #need to change directory paths
-outputPath = "C:\\Users\\janam\\Desktop\\output\\"
+outputPath = "/opt/newvolume/dataout/"
 curDate = dt.today()
 fileName = "model_" + curDate.strftime("%Y%m%d") + ".xlsx"
 if os.path.isfile(outputPath + fileName):
@@ -100,9 +102,9 @@ for file in files:
     workbook = op.load_workbook(in_file, read_only=True, data_only=True)
     allWorksheetsInTheFile = workbook.sheetnames
     print("Loading: " + file)
-    empericalModelSheets = [sheets for sheets in allWorksheetsInTheFile if "Empirical Model" in sheets]
+    empericalModelSheets = [sheets for sheets in allWorksheetsInTheFile if "Emp" in sheets]
     data = [sheets for sheets in allWorksheetsInTheFile if sheets == "Data"]
-    regressionModelSheets = [sheets for sheets in allWorksheetsInTheFile if "Regression Model" in sheets]
+    regressionModelSheets = [sheets for sheets in allWorksheetsInTheFile if "Reg" in sheets]
 
     #sheets with emperical model data
     logFile.writelines('\t\t\t\tFileName: ' + file + '\n\n')
@@ -110,13 +112,13 @@ for file in files:
     for sheet in empericalModelSheets:
         workableSheet = workbook[sheet]
         print(sheet)
-        for row in workableSheet['D1':'D' + str(workableSheet.max_row)]:
+        for row in workableSheet['A1':'L' + str(workableSheet.max_row)]:
             for cellValue in row:
                 tempStr = str(cellValue.value)
-                if "Estimated total sold" in tempStr and tempStr[-3] == "Q":
-                    estimatedTotalSold = workableSheet[get_column_letter(cellValue.column + 2) + str(cellValue.row)]
-                    estimatedMaxSold = workableSheet[get_column_letter(cellValue.column + 2) + str(cellValue.row + 1)]
-                    estimatedMinSold = workableSheet[get_column_letter(cellValue.column + 2) + str(cellValue.row + 2)]
+                if "Max" in tempStr:
+                    estimatedTotalSold = workableSheet[get_column_letter(cellValue.column + 1) + str(cellValue.row - 1)]
+                    estimatedMaxSold = workableSheet[get_column_letter(cellValue.column + 1) + str(cellValue.row)]
+                    estimatedMinSold = workableSheet[get_column_letter(cellValue.column + 1) + str(cellValue.row + 1)]
 
                     # print(estimatedTotalSold.value)
                     # print(estimatedMaxSold.value)
@@ -176,17 +178,19 @@ for file in files:
                         outputWorkbookWorksheet["C"+str(rowCounterRegression)] = "Null"
                     
                     rowCounterRegression = rowCounterRegression + 1
+    curRow = max(rowCounterEmpirical, rowCounterRegression)
+    rowCounterRegression, rowCounterEmpirical = curRow, curRow  
     innertoc = timeit.default_timer()
     pTime = str(innertoc - innertic)
     logFile.writelines('Time taken by Regression sheets in ' + file + ' : ' + pTime + '\n\n') 
 
     innerDataTic = timeit.default_timer()
     logFile.writelines('Uploading "Data" sheet from ' + file + ' to database \n\n')
+    
     for sheet in data:
         finalDFColumnList = []
         ogColList = ['Date', 'FacilityType', 'BedSize', 'Region', 'Manufacturer', 'Ticker', 'Group', 'Therapy', 'Anatomy','SubAnatomy', 'ProductCategory', 'Quantity', 'AvgPrice', 'TotalSpend']
-        path = "C:\\Users\\janam\\Desktop\\ETL Datasheet\\"
-        eFiles = os.listdir(path)
+        eFiles = os.listdir(zipPath)
         eFiles = [file for file in eFiles if ".xlsx" in file]
 
         df = pd.read_excel(zipPath + file, sheet_name=sheet)
@@ -250,8 +254,8 @@ mydbData.close()
 uploadTimer2 = timeit.default_timer()
 uploadTime = str(uploadTimer2 - uploadTimer1)
 logFile.writelines('Time taken to upload the final data to database : ' + uploadTime + '\n\n')
-# archiveDestinationPath = "/opt/eVolume/datout/archive/"
-# su.move(file[0], archiveDestinationPath)
+archiveDestinationPath = "/opt/newcolume/archive/"
+su.move(file[0], archiveDestinationPath)
 
 toc = timeit.default_timer()
 

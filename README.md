@@ -1,6 +1,6 @@
 This repository contains a python script specifically created to extract excel data and upload it to a database.
 
-####Technologies Used:
+##Technologies Used:
 1. Python
 2. AWS EC2
 3. AWS RDS
